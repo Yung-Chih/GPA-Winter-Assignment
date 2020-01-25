@@ -1,0 +1,15 @@
+static const char* fs_source[] = {
+	"#version 410 core                                               	\n"
+	"// color is the output color of this fragment shader            	\n"
+	"out vec4 color;                                                 	\n"
+	"                                                                	\n"
+	"void main()                                                     	\n"
+	"{                                                               	\n"
+	"    // compute color based on the fragment’s screen coordinate	\n"
+	"    color = vec4(                                               	\n"
+	"        sin(gl_FragCoord.x * 0.25) * 0.5 + 0.5,                 	\n"
+	"        cos(gl_FragCoord.y * 0.25) * 0.5 + 0.5,                 	\n"
+	"        sin(gl_FragCoord.x * 0.15) * cos(gl_FragCoord.y * 0.15),	\n"
+	"        1.0);                                                   	\n"
+	"}                                                               	\n"
+};
